@@ -21,3 +21,15 @@ int uniquePaths(int m, int n) {
         }
     return path[m-1][n-1] ;
 }
+
+
+int uniquePaths2(int m, int n ) {
+    int N = n+m-2;
+    int k = n-1;
+    double res = 0;
+    for(int i = 1; i <= k; i++)
+        res = res * (N-k+i)/i;
+
+    return (int)res;
+
+}
